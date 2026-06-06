@@ -20,7 +20,7 @@ pipeline {
                     nohup java -cp "target/classes:target/dependency/*:target/devops-multitier-app-1.0-SNAPSHOT.jar" com.visualpath.MultiTierApp > multitier.log 2>&1 &
                 '''
                 echo 'Multi-tier app infrastructure is starting up...'
-                sleep 3
+                sleep 3s
                 echo 'Depeloyment successful! Access your live application at http://192.168.1.14:8081'
             }
         }
