@@ -31,7 +31,7 @@ public class MultiTierApp {
                 }
             });
             
-            System.out.println("Web tier listening on http://localhost:8081");
+            System.out.println("Web tier Pull request testing listening on http://localhost:8081");
             server.setExecutor(null);
             server.start();
             Thread.currentThread().join();
