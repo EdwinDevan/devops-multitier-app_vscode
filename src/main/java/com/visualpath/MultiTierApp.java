@@ -48,7 +48,7 @@ public class MultiTierApp {
                 }
             });
             
-            System.out.println("Web tier listening on http://localhost:8085");
+            System.out.println("Web tier edwin listening on http://localhost:8085");
             server.setExecutor(null);
             server.start();
             Thread.currentThread().join();
