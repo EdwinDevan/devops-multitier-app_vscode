@@ -12,9 +12,11 @@ pipeline {
         
         stage('Deploy to Production') {
             // CRITICAL: This stage ONLY runs if the code is on the main branch!
-            when {
-                branch 'main'
-            }
+           when {
+        expression { 
+            return env.BRANCH_NAME == 'main' || rg.jenkinsci.plugins.workflow.steps.ScmStep != null 
+        }
+    }
             steps {
                 sh 'sudo fuser -k 8081/tcp || true'
                 sh '''
