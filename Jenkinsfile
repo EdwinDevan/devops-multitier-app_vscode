@@ -14,7 +14,6 @@ pipeline {
             // CRITICAL: This stage ONLY runs if the code is on the main branch!
            when {
         expression { 
-            #return env.BRANCH_NAME == 'main' || rg.jenkinsci.plugins.workflow.steps.ScmStep != null 
             return env.BRANCH_NAME == 'main' || env.BRANCH_NAME == null 
             }
         }
