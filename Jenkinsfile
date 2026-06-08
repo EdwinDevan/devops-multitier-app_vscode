@@ -11,13 +11,7 @@ pipeline {
         }
         
         stage('Deploy to Production') {
-            // CRITICAL: This stage ONLY runs if the code is on the main branch!
-           when {
-        expression { 
-            return env.BRANCH_NAME == 'main' || env.BRANCH_NAME == null 
-            }
-        }
-    }
+          
             steps {
                 sh 'sudo fuser -k 8081/tcp || true'
                 sh '''
@@ -28,3 +22,4 @@ pipeline {
             }
         }
     }
+}
