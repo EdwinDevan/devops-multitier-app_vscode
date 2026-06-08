@@ -23,7 +23,7 @@ public class MultiTierApp {
             server.createContext("/", new HttpHandler() {
                 @Override
                 public void handle(HttpExchange exchange) throws IOException {
-                    String response = "<h1>MULTI-TIER WEB APP Test6: ONLINE</h1><p>Connected cleanly to MySQL Data Tier!</p>";
+                    String response = "<h1>MULTI-TIER WEB APP Test7: ONLINE</h1><p>Connected cleanly to MySQL Data Tier!</p>";
                     exchange.sendResponseHeaders(200, response.length());
                     OutputStream os = exchange.getResponseBody();
                     os.write(response.getBytes());
