@@ -84,7 +84,7 @@ public class MultiTierApp {
     // Fetch data from database
     private static String fetchDataFromDB(Connection conn) throws Exception {
         String sql = "SELECT id, username, email FROM users";
-        StringBuilder response = new StringBuilder("<h1>MULTI-TIER WEB APP: ONLINE</h1>");
+        StringBuilder response = new StringBuilder("<h1>MULTI-TIER WEB Edwin APP: ONLINE</h1>");
         response.append("<p>Connected to MySQL Data Tier!</p><ul>");
         
         try (Statement stmt = conn.createStatement();
