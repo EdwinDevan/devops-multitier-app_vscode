@@ -26,7 +26,7 @@ public class MultiTierApp {
             createTable(conn);
             
             // Insert sample data
-            insertData(conn, "john_doe", "john@example.com");
+            // insertData(conn, "john_doe", "john@example.com");
             
             HttpServer server = HttpServer.create(new InetSocketAddress(8085), 0);
             server.createContext("/", new HttpHandler() {
