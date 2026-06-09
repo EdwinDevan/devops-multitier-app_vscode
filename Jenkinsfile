@@ -21,7 +21,7 @@ pipeline {
             }
             steps {
                 // Safely stop any old application running on port 8081
-                sh 'sudo fuser -k 8081/tcp || true'
+                sh 'sudo fuser -k 8085/tcp || true'
                 
                 // Spin up the new application process cleanly in the background
                 sh '''
